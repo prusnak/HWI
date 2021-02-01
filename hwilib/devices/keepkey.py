@@ -40,6 +40,7 @@ def enumerate(password=''):
             if 'keepkey' not in client.client.features.vendor:
                 continue
 
+            d_data['label'] = client.client.features.label
             if d_data['path'] == 'udp:127.0.0.1:21324':
                 d_data['model'] += '_simulator'
 
